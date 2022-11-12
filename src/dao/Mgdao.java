@@ -1,0 +1,35 @@
+package dao;
+
+import java.util.List;
+
+import bean.EmpProj;
+import bean.Employee;
+import bean.Gpm;
+import bean.Project;
+
+public interface Mgdao {
+	public  String addProject(int projid, String projname, String projdesc, int duration, String sdate);
+
+	public List<Project> viewListOfProject();
+
+	public String addGPM(String gpmname, String gpmmobile, String gpmemail, String gpmadd, String gpmaadhar, String password);
+
+	public List<Gpm> viewAllGPM();
+
+	public String allocateProjectToGpm(int projid, int gpmid);
+
+	public List<EmpProj> listOfEmpOnProject(String projname);
+
+	public boolean loginAsGpm(String email,String password);
+
+	public String addEmployee(String empname, String empmobile, String empemail, String empadd, String empaadhar,
+			int empwages, int total_days, String password);
+
+	public Employee viewEmployeeDetail(String empemail);
+
+	public String assignEmployeeToProject(int projid, int empid);
+
+	public List<EmpProj> viewTotalEmpWorkedInProject(int empid);
+
+
+}
