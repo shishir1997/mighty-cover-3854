@@ -20,6 +20,9 @@ public class DBUtil {
 
 		try {
 			connec =	DriverManager.getConnection("jdbc:mysql://localhost:3306/fw19sb101","root","root");
+		
+	
+			
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
